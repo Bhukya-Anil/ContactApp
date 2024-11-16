@@ -22,7 +22,7 @@ const ContactTable = ({ onEdit }) => {
   const [order, setOrder] = useState("asc");
   const [orderBy, setOrderBy] = useState("firstName");
 
-  // Fetch contacts from API
+
   const fetchContacts = async () => {
     try {
       const response = await axios.get("http://localhost:5000/api/contacts");
@@ -34,9 +34,8 @@ const ContactTable = ({ onEdit }) => {
 
   useEffect(() => {
     fetchContacts();
-  }, []);
+  }, [contacts]);
 
-  // Delete contact
   const handleDelete = async (id) => {
     try {
       await axios.delete(`http://localhost:5000/api/contacts/${id}`);
@@ -49,7 +48,6 @@ const ContactTable = ({ onEdit }) => {
     }
   };
 
-  // Sorting handler
   const handleRequestSort = (property) => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
@@ -68,7 +66,6 @@ const ContactTable = ({ onEdit }) => {
     });
   };
 
-  // Pagination handlers
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };

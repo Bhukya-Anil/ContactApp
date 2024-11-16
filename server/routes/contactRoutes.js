@@ -8,10 +8,10 @@ const {
 } = require("../controllers/contactController");
 const router = express.Router();
 
-// Routes for CRUD operations
-router.post("/", addContact); // Create
-router.get("/", getContacts); // Read all
-router.put("/:id", updateContact); // Update
-router.delete("/:id", deleteContact); // Delete
+
+router.post("/", addContact); 
+router.get("/", getContacts); 
+router.put("/:id", updateContact); 
+router.delete("/:id", deleteContact);
 
 module.exports = router;

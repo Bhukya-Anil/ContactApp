@@ -1,12 +1,12 @@
-// server/controllers/contactController.js
+
 const Contact = require("../models/contactModel");
 
-// Add a new contact
+
 const addContact = async (req, res) => {
   try {
     const { email } = req.body;
 
-    // Check for duplicate email
+
     const existingContact = await Contact.findOne({ email });
     if (existingContact) {
       return res
@@ -21,7 +21,7 @@ const addContact = async (req, res) => {
   }
 };
 
-// Get all contacts
+
 const getContacts = async (req, res) => {
   try {
     const contacts = await Contact.find();
@@ -31,14 +31,14 @@ const getContacts = async (req, res) => {
   }
 };
 
-// Update a specific contact
+
 const updateContact = async (req, res) => {
   try {
     const { id } = req.params;
 
     const updatedContact = await Contact.findByIdAndUpdate(id, req.body, {
-      new: true, // Return the updated document
-      runValidators: true, // Run schema validators
+      new: true,
+      runValidators: true, 
     });
 
     if (!updatedContact) {
@@ -51,7 +51,7 @@ const updateContact = async (req, res) => {
   }
 };
 
-// Delete a specific contact
+
 const deleteContact = async (req, res) => {
   try {
     const { id } = req.params;

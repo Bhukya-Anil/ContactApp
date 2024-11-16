@@ -7,11 +7,11 @@ function App() {
   const [editingContact, setEditingContact] = useState(null);
 
   const handleEdit = (contact) => {
-    setEditingContact(contact); // Pass the contact to the form for editing
+    setEditingContact(contact); 
   };
 
   const handleFormSubmission = () => {
-    setEditingContact(null); // Reset the editingContact after submission
+    setEditingContact(null);
   };
 
   return (

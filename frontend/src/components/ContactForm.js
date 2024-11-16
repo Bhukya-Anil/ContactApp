@@ -12,7 +12,6 @@ const ContactForm = ({ editingContact, onFormSubmission }) => {
     jobTitle: "",
   });
 
-  // Populate the form when editingContact changes
   useEffect(() => {
     if (editingContact) {
       setFormData(editingContact);
@@ -36,18 +35,26 @@ const ContactForm = ({ editingContact, onFormSubmission }) => {
     e.preventDefault();
     try {
       if (editingContact) {
-        // Update contact
         await axios.put(
           `http://localhost:5000/api/contacts/${editingContact._id}`,
           formData
         );
         alert("Contact updated successfully!");
+        
       } else {
-        // Add new contact
         await axios.post("http://localhost:5000/api/contacts", formData);
         alert("Contact added successfully!");
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            company: "",
+            jobTitle: "",
+          });
+
       }
-      onFormSubmission(); // Notify parent about submission
+      onFormSubmission(); 
     } catch (error) {
       alert("Email Already Exists");
       console.error("Error saving contact:", error.message);
