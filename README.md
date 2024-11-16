@@ -1,26 +1,26 @@
 # Contact Management App
-Description
+* Description
 The Contact Management App allows users to add, edit, and manage their contact information. The app provides a simple interface for managing contacts including first name, last name, email, phone number, company, and job title. It uses a MongoDB database to store contact data and provides RESTful API endpoints for communication between the frontend and backend.
 
-Features:
+* Features:
 Add new contacts.
 Edit existing contacts.
 Simple form validation.
 Backend integration with a REST API.
 Store data in MongoDB.
 
-Technologies Used:
+* Technologies Used:
 Frontend: React, Material-UI
 Backend: Node.js, Express
 Database: MongoDB
 API Communication: Axios
 
-Prerequisites
+* Prerequisites
 Before setting up the project, make sure you have the following installed:
 Node.js (version 14.x or later)
 MongoDB (local or cloud MongoDB instance)
 
-Setup Instructions
+* Setup Instructions
 1. Clone the Repository
 First, clone the repository to your local machine:
 https://github.com/Bhukya-Anil/ContactApp.git
@@ -61,7 +61,7 @@ This will start the frontend application on http://localhost:3000.
 
 Now, your Contact Management App should be running locally!
 
-Database Schema
+* Database Schema
 Contacts Collection:
 This schema represents the contacts in the MongoDB database.
 
@@ -78,14 +78,14 @@ const contactSchema = new mongoose.Schema(
 );
 
 
-API Routes:
+* API Routes:
 POST /api/contacts: Adds a new contact.
 PUT /api/contacts/:id: Updates an existing contact by ID.
 GET /api/contacts: Retrieves all contacts.
 DELETE /api/contacts/:id: Deletes a contact by ID.
 
 
-How the App Works:
+* How the App Works:
 Frontend:
 The React frontend consists of two main components: the ContactForm for adding or editing contacts and the ContactTable for displaying the list of contacts.
 The ContactForm component sends POST requests to add a new contact or PUT requests to edit an existing contact.
@@ -100,12 +100,12 @@ Database:
 MongoDB is used to store the contact data, which includes fields like first name, last name, email, phone, company, and job title.
 Mongoose is used to define the schema for the contacts and interact with the MongoDB database.
 
-Major Technical Decisions:
+* Major Technical Decisions:
 React: Chosen for its component-based architecture, making the UI easy to manage and update.
 Material-UI: Used for building responsive and user-friendly forms and UI components.
 Express and Node.js: Provides a lightweight and flexible backend framework to handle API requests.
 MongoDB: Chosen for its schema-less design, which allows easy storage of dynamic data like contact information.
 
-Troubleshooting:
+* Troubleshooting:
 MongoDB Connection Issues: Ensure your MongoDB service is running and check the MongoDB URI in your .env file.
 CORS Issues: If you face CORS issues, ensure CORS is configured in the Express backend.
