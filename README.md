@@ -1,5 +1,5 @@
 # Contact Management App
-* Description
+* Description : 
 The Contact Management App allows users to add, edit, and manage their contact information. The app provides a simple interface for managing contacts including first name, last name, email, phone number, company, and job title. It uses a MongoDB database to store contact data and provides RESTful API endpoints for communication between the frontend and backend.
 
 * Features:
@@ -15,12 +15,12 @@ Backend: Node.js, Express
 Database: MongoDB
 API Communication: Axios
 
-* Prerequisites
+* Prerequisites : 
 Before setting up the project, make sure you have the following installed:
 Node.js (version 14.x or later)
 MongoDB (local or cloud MongoDB instance)
 
-* Setup Instructions
+* Setup Instructions : 
 1. Clone the Repository
 First, clone the repository to your local machine:
 https://github.com/Bhukya-Anil/ContactApp.git
@@ -61,7 +61,7 @@ This will start the frontend application on http://localhost:3000.
 
 Now, your Contact Management App should be running locally!
 
-* Database Schema
+* Database Schema : 
 Contacts Collection:
 This schema represents the contacts in the MongoDB database.
 
